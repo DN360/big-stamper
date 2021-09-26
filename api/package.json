@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "clasp": "clasp",
+    "clasp:prelogin": "ts-node utils/prelogin.ts",
+    "clasp:login": "clasp login",
+    "clasp:postlogin": "ts-node utils/postlogin.ts",
+    "clasp:pre": "ts-node utils/pre.ts",
+    "clasp:post": "ts-node utils/post.ts",
+    "clasp:create": "clasp create --type sheets --title \"Big Stamp Sheet\" --rootDir ./dist",
+    "clasp:push": "clasp push",
+    "postinstall": "npm-run-all --sequential clasp:prelogin clasp:login clasp:postlogin",
+    "create-app": "npm-run-all --sequential -c clasp:pre clasp:create clasp:post",
+    "push": "npm-run-all --sequential -c clasp:pre clasp:push clasp:post"
+  },
+  "dependencies": {
+    "@google/clasp": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.1",
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^10.2.1",
+    "tsc": "^2.0.3",
+    "typescript": "^4.4.3"
+  }
+}
