@@ -25,7 +25,7 @@
 ### API側のインストール
 
 - `npm i` もしくは `yarn` で必須パッケージをインストールする
-- すると、claspからURLによるログインを求められるのでログインする
+- `npm run login` もしくは `yarn login` でclaspからURLによるログインを求められるのでログインする
 - その後 `npm run create-app` もしくは `yarn create-app` でスプレッドシートとスクリプトを作成する
 
 ### Discord bot
